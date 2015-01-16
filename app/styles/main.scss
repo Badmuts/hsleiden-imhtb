@@ -1,31 +1,37 @@
 // bower:scss
+@import "../../bower_components/bourbon/app/assets/stylesheets/_bourbon.scss";
 // endbower
+@import "mixins";
+@import "reset";
+@import "grid";
+@import "fonts";
+@import "header";
+@import "nav";
+@import "icons";
+@import "dropdown";
+@import "where-to-watch";
+@import "card";
+@import "people";
+@import "awards";
+@import "footer";
+@import "story";
+@import "made-by";
 
 body {
-  background: #fafafa;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #333;
+  // font-size: modular-scale(1);
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: rgba(#17171F, 1);
+  color: rgba(255, 255, 255, 1);
+  @include transition(transform 600ms cubic-bezier(0.165, 0.84, 0.44, 1));
+  @include transform(translateX(0%));
 }
 
-.hero-unit {
-  margin: 50px auto 0 auto;
-  width: 300px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: #eee;
-  border-radius: 6px;
-  padding: 60px;
-  h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
+* {box-sizing: border-box;}
+
+@media (max-width: $screen-md-min) and (max-width: $screen-sm-min) {
+  body.menu-open {
+    @include transition(transform 600ms cubic-bezier(0.165, 0.84, 0.44, 1));
+    @include transform(translateX(80%));
+    overflow: hidden;
   }
-}
-
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
 }

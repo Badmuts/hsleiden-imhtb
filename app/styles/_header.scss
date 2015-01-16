@@ -1,0 +1,40 @@
+.header {
+  background: linear-gradient(
+      rgba(#17171F, 0.65) 65%,
+      rgba(#17171F, 1)
+    ), url("../images/bg-header.jpg");
+  background-size: cover;
+  // height: 100vh;
+  padding-bottom: 5rem;
+  @include clearfix();
+}
+
+.logo {
+  height: 50px;
+
+  img {
+    height: 100%;
+    border: 0;
+  }
+}
+
+.video-trailer {
+  position: relative;
+  padding-bottom: 44.25%;
+  padding-top: 25px;
+  height: 0;
+  margin-top: 5rem;
+}
+
+.video-trailer iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: $screen-md-min) {
+  .video-trailer {margin-top: 0;}
+  .header {padding-bottom: 1rem;}
+}

@@ -1,0 +1,64 @@
+.card {
+  background-color: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  color: #000;
+  margin-bottom: 30px;
+  font-size: modular-scale(0);
+}
+
+.card-large {
+  @extend .card;
+
+  img,
+  h2,
+  p {
+    float: left;
+    width: 50%;
+  }
+
+  h2,
+  p {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.card-small {
+  @extend .card;
+  h2,
+  p {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  h2 {margin-bottom: 0;}
+
+  img {
+    width: 100%;
+  }
+}
+
+@media (max-width: $screen-md-min) and (max-width: $screen-sm-min) {
+  .card {
+    font-size: modular-scale(-1);
+  }
+
+  .card-large {
+    img,
+    h2,
+    p {
+      float: none;
+      width: 100%;
+    }
+  }
+
+  .card-small {
+    img,
+    h2,
+    p {
+      float: none;
+      width: 100%;
+    }
+  }
+}

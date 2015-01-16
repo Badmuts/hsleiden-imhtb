@@ -1,0 +1,45 @@
+.footer {
+  background-color: rgba(#17171F, 1);
+
+  .copy {float: left;}
+  ul    {float: right;}
+
+  ul li {
+    display: inline-block;
+  }
+
+  a {
+    color: rgba(255, 255, 255, 1);
+    opacity: 0.8;
+    @include transition(opacity 150ms ease-in);
+    text-decoration: none;
+
+    &:hover {
+      opacity: 1;
+      @include transition(opacity 150ms ease-in);
+    }
+  }
+
+  li > a {
+    padding: 5px 10px;
+    line-height: 52px;
+
+    &:hover {
+      opacity: 1;
+      @include transition(opacity 150ms ease-in);
+    }
+  }
+}
+
+@media (max-width: $screen-md-min) and (max-width: $screen-sm-min) {
+  .footer {
+    text-align: center;
+
+    .copy,
+    ul {
+      float: none;
+      text-align: center;
+      width: 100%;
+    }
+  }
+}

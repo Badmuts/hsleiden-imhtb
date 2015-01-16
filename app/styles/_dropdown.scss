@@ -1,0 +1,110 @@
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  float: left;
+  min-width: 160px;
+  z-index: 1000;
+  background-color: #fff;
+  border-radius: 2px;
+  list-style: none;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+  background-clip: padding-box;
+
+  li {
+    display: block;
+    padding: 5px 17px;
+    border-bottom: 1px solid darken(#fff, 7%);;
+
+    &:hover {background-color: darken(#fff, 5%);}
+
+    &:first-child {
+      border-top-right-radius: 2px;
+      border-top-left-radius: 2px;
+    }
+
+    &:last-child {
+      border-bottom-right-radius: 2px;
+      border-bottom-left-radius: 2px;
+      border-bottom-color: transparent;
+    }
+  }
+
+  a {
+    color: #000;
+    clear: both;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 5px;
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #fff;
+    font-size: 0;
+    line-height: 0;
+  }
+}
+
+.dropdown-menu.open {display: block;}
+
+@media (max-width: $screen-md-min) and (max-width: $screen-sm-min) {
+  .menu {
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: static;
+      float: none;
+      min-width: auto;
+      background: rgba(#17171F, 1);
+      border-radius: none;
+      list-style: none;
+      box-shadow: none;
+
+      li {
+        display: block;
+        padding: 10px .7em;
+        border-bottom: 1px solid darken(rgba(#17171F, 1), 3%);
+        border-radius: 0;
+        background-color: rgba(#17171F, 1);
+
+        &:first-child {
+          border-top: 1px solid darken(rgba(#17171F, 1), 3%);
+          margin-top: .7em;
+        }
+
+        &:last-child {
+          border-bottom: none;
+          padding-bottom: 0;
+        }
+
+        &:hover {background-color: darken(rgba(#17171F, 1), 5%);}
+      }
+
+      a {
+        color: #FFF;
+        opacity: 0.7;
+        clear: both;
+      }
+
+      &:before {
+        content: "";
+        border: none;
+      }
+    }
+
+    .dropdown-menu.open {display: block;}
+  }
+}
